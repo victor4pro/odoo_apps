@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form_gmap" model="ir.ui.view">
+        <field name="name">res.partner.inherit.gmap</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[@name='geo_location']/group" position="inside">
+                <group string="Geolocation Map">
+                    <group>
+                         <field 
+                            name="gmap_widget" 
+                            nolabel="1" 
+                            widget="web_google_map_widget" 
+                            options="{'width' : '425px', 'height' : '300px', 'latitude_field': 'partner_latitude', 'longitude_field':'partner_longitude'}"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,123 @@
+<section class="oe_container">
+	<div class="oe_row oe_spaced">
+		<h2 class="oe_slogan" style="color: #7c7bad;font-size:35px;font-weight:bolder;">
+            Map Widget | Google Map Widget
+        </h2>
+		<div>
+            <p style="text-align: center;">
+                This odoo module helps to add the map widget in any form views using existing latitude and longitude fields. 
+                The module allows you to mark the location on the map by dragging the marker.
+            </p>
+        </div>
+	</div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h4 class="oe_slogan" style="color: #7c7bad;font-size:35px;font-weight:bolder;">Installation</h4>
+        <div class="oe_span12">
+            <p><strong>- Copy web_google_map_widget module to addons folder</strong></p>
+            <p><strong>- Install the module normally like other modules</strong></p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h4 class="oe_slogan" style="color: #7c7bad;font-size:35px;font-weight:bolder;">1. Set Google Map API for Widget</h4>
+        <p>Settings -> Google Map Widget -> Set API keys</p>
+        <div class="oe_span12">            
+            </br>
+            <div class="oe_row_img  oe_screenshot oe_centered">
+                <img style="border:10px solid white; width: 100% !important" src="1.png">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h4 class="oe_slogan" style="color: #7c7bad;font-size:35px;font-weight:bolder;">2. Set Widget on Text</h4>
+        <p>XML -> add widget="web_google_map_widget" and set Optins as width, height, latitude_field and longitude_field </p>
+        <div class="oe_span12">            
+            </br>
+            <div class="oe_row_img  oe_screenshot oe_centered">
+                <img style="border:10px solid white; width: 100% !important" src="2.png">
+            </div>
+        </div>
+        </br>
+        <div class="oe_span12">            
+            </br>
+            <div class="oe_row_img  oe_screenshot oe_centered">
+                <img style="border:10px solid white; width: 100% !important" src="3.png">
+            </div>
+            <br/>
+            <div class="oe_row_img  oe_screenshot oe_centered">
+                <pre style="text-align: justify; line-height: 1.4;">
+                    <span style="font-family: Verdana; color: rgb(66, 66, 66);">     
+                        &lt;record id="view_partner_form_gmap" model="ir.ui.view"&gt;
+                            &lt;field name="name">res.partner.inherit.gmap&lt;/field&gt;
+                            &lt;field name="model">res.partner&lt;/field&gt;
+                            &lt;field name="inherit_id" ref="base.view_partner_form"/&gt;
+                            &lt;field name="arch" type="xml"&gt;
+                                &lt;xpath expr="//notebook/page[@name='geo_location']/group" position="inside"&gt;
+                                    &lt;group string="Geolocation Map"&gt;
+                                        &lt;group&gt;
+                                            &lt;field 
+                                                name="gmap_widget" 
+                                                nolabel="1" 
+                                                widget="web_google_map_widget" 
+                                                options="{'width' : '425px', 'height' : '300px', 'latitude_field': 'partner_latitude', 'longitude_field':'partner_longitude'}"/&gt;
+                                        &lt;/group&gt;
+                                    &lt;/group&gt;
+                                &lt;/xpath&gt;
+                            &lt;/field&gt;
+                        &lt;/record&gt;
+                    </span>
+                </pre>
+            </div>
+            </br>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h4 class="oe_slogan" style="color: #7c7bad;font-size:35px;font-weight:bolder;">4. Map Field</h4>
+        <p>You can click on the map to create your location or drag and drop the existing marker to update the coordinates.</p>
+        <div class="oe_span12">            
+            </br>
+            <div class="oe_row_img  oe_screenshot oe_centered">
+                <img style="border:10px solid white; width: 100% !important" src="4.png">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h4 class="oe_slogan" style="color: #7c7bad;font-size:35px;font-weight:bolder;">Features</h4>        
+        <div class="oe_span12">
+            </br>
+            <div class="oe_row_img  oe_screenshot oe_centered">
+                <img style="border:10px solid white; width: 100% !important" src="web_google_map_widget.gif">
+            </div>
+            </br>
+        </div>        
+        </br>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <h3 class="oe_slogan">Help and Support</h3>
+    <div class="oe_slogan">
+        <a class="btn btn-primary btn-lg mt8" href="mailto:cfinfosolutions@gmail.com">
+            <i class="fa fa-envelope"></i> Email
+        </a>
+        <a class="btn btn-primary btn-lg mt8" href="http://www.cfis.store/">
+            <i class="fa fa-phone"></i> Contact Us
+        </a>
+        <a class="btn btn-primary btn-lg mt8" href="http://www.cfis.store/">
+            <i class="fa fa-check-square"></i> Request Customization </a>
+    </div>
+</section>
