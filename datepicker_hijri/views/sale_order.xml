@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <record id="view_sale_order_form_inherit_datepicker" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="app_televentas.sale_order_view_micarro_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_order_init']" position="attributes">
+                    <attribute name="widget">date_hijri</attribute>
+                </xpath>
+                <xpath expr="//field[@name='date_order_final']" position="attributes">
+                    <attribute name="widget">date_hijri</attribute>
+                </xpath>
+            </field>
+        </record>
+</odoo>
